@@ -3,6 +3,7 @@ package currencyExchangeInterface;
 import java.util.GregorianCalendar;
 
 import currencies.Currency;
+import currencies.rate.Rate;
 
 public class CurrencyExchange implements currencyInterface {
 
@@ -19,9 +20,10 @@ public class CurrencyExchange implements currencyInterface {
 	}
 
 	@Override
-	public void restoreRate(Currency currency, GregorianCalendar date) {
-		// TODO Auto-generated method stub
-
+	public Rate restoreRate(Currency currency, GregorianCalendar date) {
+		
+		return null;
+		
 	}
 
 }
