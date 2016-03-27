@@ -9,13 +9,21 @@ public class Currency {
 		return name;
 	}
 	public void setName(String name) {
-		this.name = name;
+		if(name==null)
+			throw new NullPointerException("Error in name typing!");
+		else if(name.isEmpty())
+			throw new IllegalArgumentException("Enter the name!");
+		else this.name = name;
 	}
 	public String getAbbreviatedName() {
 		return abbreviatedName;
 	}
 	public void setAbbreviatedName(String abbreviatedName) {
-		this.abbreviatedName = abbreviatedName;
+		if(abbreviatedName==null)
+			throw new NullPointerException("Error in abbreviatedName typing!");
+		else if(abbreviatedName.isEmpty())
+			throw new IllegalArgumentException("Enter the abbreviatedName!");
+		else this.abbreviatedName = abbreviatedName;
 	}
 	@Override
 	public int hashCode() {

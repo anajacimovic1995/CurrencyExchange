@@ -13,25 +13,36 @@ public class Rate {
 		return date;
 	}
 	public void setDate(GregorianCalendar date) {
+		if(date==null)
+			throw new NullPointerException("Error in typing date!");
 		this.date = date;
 	}
 	public double getSales() {
 		return sales;
 	}
 	public void setSales(double sales) {
-		this.sales = sales;
+		if(sales>0)
+			this.sales = sales;
+		else
+			throw new IllegalArgumentException("Sales is 0 or negative number!");
 	}
 	public double getMedium() {
 		return medium;
 	}
 	public void setMedium(double medium) {
-		this.medium = medium;
+		if(medium>0)
+			this.medium = medium;
+		else
+			throw new IllegalArgumentException("Medium is 0 or negative number!");
 	}
 	public double getPurchasable() {
 		return purchasable;
 	}
 	public void setPurchasable(double purchasable) {
-		this.purchasable = purchasable;
+		if(purchasable>0)
+			this.purchasable = purchasable;
+		else
+			throw new IllegalArgumentException("Purchasable is 0 or negative number!");
 	}
 	@Override
 	public int hashCode() {
