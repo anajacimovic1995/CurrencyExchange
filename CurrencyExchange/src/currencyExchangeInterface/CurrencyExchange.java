@@ -28,14 +28,23 @@ public class CurrencyExchange implements currencyInterface {
 
 	@Override
 	public void deleteRate(Currency currency, GregorianCalendar date) {
-		// TODO Auto-generated method stub
+		for(int i=0; i<rates.size(); i++){
+			if(rates.get(i).getDate().equals(date)){
+				rates.remove(i);
+			}
+		}
 
 	}
 
 	@Override
-	public void restoreRate(Currency currency, GregorianCalendar date) {
-		// TODO Auto-generated method stub
-
+	public Rate restoreRate(Currency currency, GregorianCalendar date) {
+		for(int i=0; i<rates.size(); i++){
+			if(rates.get(i).getDate().equals(date)){
+				return rates.get(i);
+			}
+		}
+		
+		return null;
 	}
 
 }
