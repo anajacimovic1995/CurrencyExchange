@@ -8,10 +8,12 @@ import currencies.rate.Rate;
 
 public class CurrencyExchange implements currencyInterface {
 
+
 	private LinkedList<Rate> rates;
 	
 	public CurrencyExchange(LinkedList<Rate> rates) {
 		this.rates=rates;
+
 	}
 	
 	@Override
@@ -23,8 +25,10 @@ public class CurrencyExchange implements currencyInterface {
 		r.setPurchasable(p);
 		r.setSales(s);
 		
+
 		if(rates.contains(r))
 			throw new RuntimeException("It is already exist!");
+
 		rates.add(r);
 	}
 
