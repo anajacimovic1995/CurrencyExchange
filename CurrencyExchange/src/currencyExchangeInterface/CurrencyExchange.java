@@ -11,6 +11,14 @@ public class CurrencyExchange implements currencyInterface {
 
 	private LinkedList<Rate> rates;
 	
+	public LinkedList<Rate> getRates() {
+		return rates;
+	}
+
+	public void setRates(LinkedList<Rate> rates) {
+		this.rates = rates;
+	}
+
 	public CurrencyExchange(LinkedList<Rate> rates) {
 		this.rates=rates;
 
